@@ -175,6 +175,9 @@ def update_announcement(
         raise HTTPException(status_code=404, detail="Announcement not found")
 
     updated = announcements_collection.find_one({"_id": announcement_id})
+    if not updated:
+        raise HTTPException(status_code=404, detail="Announcement not found")
+
     return serialize_announcement(updated)
 
 
