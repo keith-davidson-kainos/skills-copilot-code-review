@@ -826,6 +826,12 @@ textarea {
   max-width: 980px;
 }
 
+.close-modal {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
 .announcements-modal-header {
   display: flex;
   justify-content: space-between;
