@@ -683,12 +683,15 @@ footer {
 }
 
 #user-controls {
+  position: absolute;
   top: 16px;
   right: 18px;
   z-index: 1;
 }
 
 #user-status {
+  display: flex;
+  align-items: center;
   gap: 10px;
   flex-wrap: wrap;
   justify-content: flex-end;
