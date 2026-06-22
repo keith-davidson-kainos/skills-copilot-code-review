@@ -672,3 +672,329 @@ footer {
   padding: 15px;
   font-weight: bold;
 }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  font-weight: 700;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+#user-controls {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  z-index: 1;
+}
+
+#user-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.announcement-shell {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 14px;
+}
+
+.announcement-banner {
+  background:
+    linear-gradient(135deg, rgba(245, 133, 73, 0.14), rgba(20, 54, 66, 0.08)),
+    var(--surface);
+  border: 1px solid rgba(245, 133, 73, 0.24);
+  color: var(--text-primary);
+  padding: 22px;
+  border-radius: 20px;
+  display: grid;
+  gap: 18px;
+  box-shadow: 0 14px 28px rgba(37, 50, 56, 0.08);
+  text-align: left;
+}
+
+.announcement-banner-headline {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.announcement-banner-headline h3 {
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.announcement-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+  color: var(--secondary-dark);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.announcement-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+  color: #fff;
+  font-size: 1.3rem;
+  box-shadow: 0 12px 18px rgba(245, 133, 73, 0.24);
+}
+
+.announcement-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.announcement-item {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(20, 54, 66, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.announcement-item-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.announcement-item h4 {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.announcement-item p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.announcement-expiry {
+  color: var(--secondary-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font: inherit;
+  background: #fff;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 4px rgba(29, 86, 104, 0.12);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.announcements-modal-content {
+  max-width: 980px;
+}
+
+.close-modal {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.announcements-modal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-right: 28px;
+}
+
+.announcements-manager-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.2fr) minmax(280px, 1fr);
+  gap: 18px;
+}
+
+.announcement-list-panel,
+.announcement-form-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(246, 241, 232, 0.9));
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.announcements-list {
+  display: grid;
+  gap: 12px;
+}
+
+.managed-announcement-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  background: #fff;
+  box-shadow: 0 10px 18px rgba(37, 50, 56, 0.06);
+}
+
+.managed-announcement-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.managed-announcement-card h4 {
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.managed-announcement-card p {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.managed-announcement-actions,
+.announcement-form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.announcement-date-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.status-pill.active {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.status-pill.scheduled {
+  background: var(--info-light);
+  color: var(--info);
+}
+
+.status-pill.expired {
+  background: var(--error-light);
+  color: var(--error);
+}
+
+.announcement-range {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.secondary-button {
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--border-focus);
+}
+
+.secondary-button:hover {
+  background: rgba(20, 54, 66, 0.06);
+}
+
+.danger-button {
+  background: var(--error);
+  color: #fff;
+}
+
+.danger-button:hover {
+  background: #a91f1f;
+}
+
+.empty-state {
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 20px 14px;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 900px) {
+  .announcements-manager-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .announcement-date-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    padding-top: 86px;
+  }
+
+  #user-controls {
+    left: 16px;
+    right: 16px;
+    top: 16px;
+  }
+
+  #user-status {
+    justify-content: flex-start;
+  }
+
+  .announcement-banner-headline,
+  .announcement-item-header,
+  .announcements-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .announcements-modal-content {
+    padding: 18px;
+  }
+}
