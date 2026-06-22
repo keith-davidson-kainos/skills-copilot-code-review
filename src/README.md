@@ -6,6 +6,8 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 - View all available extracurricular activities
 - Sign up for activities
+- View active announcements loaded from MongoDB
+- Manage announcements from the UI when signed in as a teacher
 
 ## Getting Started
 
@@ -31,10 +33,15 @@ A super simple FastAPI application that allows students to view and sign up for 
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| GET    | `/announcements`                                                  | Get only active announcements for the public site                  |
+| GET    | `/announcements/manage?teacher_username=principal`                | Get all announcements for the management dialog                    |
+| POST   | `/announcements?teacher_username=principal`                       | Create an announcement with title, message, start date, and expiration date |
+| PUT    | `/announcements/{announcement_id}?teacher_username=principal`     | Update an existing announcement                                    |
+| DELETE | `/announcements/{announcement_id}?teacher_username=principal`     | Delete an announcement                                             |
 
 ## Data Model
 
-The application uses a simple data model with meaningful identifiers:
+The application uses MongoDB with a simple data model and seeded example content:
 
 1. **Activities** - Uses activity name as identifier:
 
@@ -47,4 +54,11 @@ The application uses a simple data model with meaningful identifiers:
    - Name
    - Grade level
 
-All data is stored in memory, which means data will be reset when the server restarts.
+3. **Announcements** - Uses a generated identifier:
+   - Title
+   - Message
+   - Optional start date
+   - Required expiration date
+   - Seeded with an example registration reminder during database initialization
+
+Data is stored in MongoDB, and the initial sample activities, teachers, and announcement are created automatically when the collections are empty.
