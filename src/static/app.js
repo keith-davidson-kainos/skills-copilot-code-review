@@ -454,7 +454,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateAuthBodyClass();
     // Refresh the activities to update the UI
     fetchActivities();
-    fetchAnnouncements();
   }
 
   // Update body class for CSS targeting
