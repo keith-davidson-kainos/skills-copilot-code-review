@@ -54,8 +54,9 @@ def init_database():
     # Initialize announcements if empty
     if announcements_collection.count_documents({}) == 0:
         for announcement in initial_announcements:
-            announcements_collection.insert_one(
-                {"_id": announcement["id"], **announcement})
+            document = {**announcement, "_id": announcement["id"]}
+            document.pop("id", None)
+            announcements_collection.insert_one(document)
 
 
 # Initial database if empty
